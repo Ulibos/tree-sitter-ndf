@@ -1,0 +1,40 @@
+================================================================================
+reference
+================================================================================
+RefTerminal
+Ref/Ref/Ref
+~/Ref/Ref.Member
+$/Ref[1]
+./Ref[0]/Ref.Member/Ref
+--------------------------------------------------------------------------------
+
+(source_file
+  (ref_terminal)
+  (ref_nested
+    (ref_terminal)
+    (ref_nested
+      (ref_terminal)
+      (ref_terminal)))
+  (ref_nested
+    (ref_scope)
+    (ref_nested
+      (ref_terminal)
+      (ref_member
+        (ref_terminal)
+        (ref_terminal))))
+  (ref_nested
+    (ref_scope)
+    (ref_indexed
+      (ref_terminal)
+      (number_dec)))
+  (ref_nested
+    (ref_scope)
+    (ref_nested
+      (ref_indexed
+        (ref_terminal)
+        (number_dec))
+      (ref_member
+        (ref_terminal)
+        (ref_nested
+          (ref_terminal)
+          (ref_terminal))))))

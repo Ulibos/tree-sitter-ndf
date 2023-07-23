@@ -1,0 +1,15 @@
+Cargo.lock
+build/
+
+/parser.*
+
+# unix
+*.a
+*.dylib
+*.so
+*.o
+
+# win
+*.obj
+*.dll
+*.exp

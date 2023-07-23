@@ -1,0 +1,243 @@
+================================================================================
+object
+================================================================================
+TObject()
+TObject(
+)
+TObject
+(
+)
+TObject
+(
+    Reference
+    Member = 1
+    Member: str = "string"
+)
+TObject
+(
+    NamespaceOnly is 1
+    Member1 = Namespace is "something"
+    Member2: type = Namespace is TObject() // ambiguous typing
+    Exported: type = export Namespace is 2
+)
+--------------------------------------------------------------------------------
+
+(source_file
+  (object
+    (type))
+  (object
+    (type))
+  (object
+    (type))
+  (object
+    (type)
+    (members
+      (ref_terminal)
+      (member
+        (name)
+        (number_dec))
+      (member
+        (name)
+        (type
+          (name))
+        (string))))
+  (object
+    (type)
+    (members
+      (assignment
+        (name)
+        (keyword)
+        (number_dec))
+      (member
+        (name)
+        (assignment
+          (name)
+          (keyword)
+          (string)))
+      (member
+        (name)
+        (type
+          (name))
+        (assignment
+          (name)
+          (keyword)
+          (object
+            (type))))
+      (comment_inline)
+      (member
+        (name)
+        (type
+          (name))
+        (visibility
+          (keyword)
+          (assignment
+            (name)
+            (keyword)
+            (number_dec)))))))
+
+================================================================================
+template
+================================================================================
+template Template[] is TObject()
+template Template[
+] is TObject(
+)
+template Template
+[
+]
+is TObject
+(
+)
+template Template
+[
+    ParmName,
+    Parm: int = 2,
+    Parm2: str  
+]
+is TObject
+(
+    Reference
+    Member = 1
+    Member: str = <Parm2>
+)
+--------------------------------------------------------------------------------
+
+(source_file
+  (template
+    (keyword)
+    (name)
+    (keyword)
+    (object
+      (type)))
+  (template
+    (keyword)
+    (name)
+    (keyword)
+    (object
+      (type)))
+  (template
+    (keyword)
+    (name)
+    (keyword)
+    (object
+      (type)))
+  (template
+    (keyword)
+    (name)
+    (params
+      (param
+        (name))
+      (param
+        (name)
+        (type
+          (builtin_type))
+        (number_dec))
+      (param
+        (name)
+        (type
+          (name))))
+    (keyword)
+    (object
+      (type)
+      (members
+        (ref_terminal)
+        (member
+          (name)
+          (number_dec))
+        (member
+          (name)
+          (type
+            (name))
+          (generic
+            (name)))))))
+
+================================================================================
+list
+================================================================================
+[]
+[1,2]
+["test",TObject(),1 /* comment */]
+--------------------------------------------------------------------------------
+
+(source_file
+  (list)
+  (list
+    (items
+      (number_dec)
+      (number_dec)))
+  (list
+    (items
+      (string)
+      (object
+        (type))
+      (number_dec))
+    (comment_block_classic)))
+
+================================================================================
+vector type
+================================================================================
+something[]
+RGBA[1,2,3,4]
+new [] // still a vector type
+--------------------------------------------------------------------------------
+
+(source_file
+  (vector_type
+    (name))
+  (vector_type
+    (builtin_vector_type)
+    (items
+      (number_dec)
+      (number_dec)
+      (number_dec)
+      (number_dec)))
+  (vector_type
+    (name))
+  (comment_inline))
+
+================================================================================
+map
+================================================================================
+MAP[]
+MAP[(1,2)]
+MAP[(1,2),(3,4)]
+MAP
+[
+    (1, TObject()),
+    (3, TObject(Member=1))
+]
+--------------------------------------------------------------------------------
+
+(source_file
+  (map
+    (keyword))
+  (map
+    (keyword)
+    (pairs
+      (pair
+        (number_dec)
+        (number_dec))))
+  (map
+    (keyword)
+    (pairs
+      (pair
+        (number_dec)
+        (number_dec))
+      (pair
+        (number_dec)
+        (number_dec))))
+  (map
+    (keyword)
+    (pairs
+      (pair
+        (number_dec)
+        (object
+          (type)))
+      (pair
+        (number_dec)
+        (object
+          (type)
+          (members
+            (member
+              (name)
+              (number_dec))))))))

@@ -1,0 +1,95 @@
+================================================================================
+oneliner
+================================================================================
+// oneliner
+// still oneliner /* multi */
+// still oneliner (* multi *)
+// still oneliner { multi }
+--------------------------------------------------------------------------------
+
+(source_file
+  (comment_inline)
+  (comment_inline)
+  (comment_inline)
+  (comment_inline))
+
+================================================================================
+multiline classic
+================================================================================
+/* multi as one*/
+/* multi as one stacked*/ // one liner
+/* multi as one stacked*/// sticky
+
+/* multi as
+multi line*/
+/* multi as
+multi line stacked*/ // one liner
+/* multi as
+multi line stacked*/// sticky
+--------------------------------------------------------------------------------
+
+(source_file
+  (comment_block_classic)
+  (comment_block_classic)
+  (comment_inline)
+  (comment_block_classic)
+  (comment_inline)
+  (comment_block_classic)
+  (comment_block_classic)
+  (comment_inline)
+  (comment_block_classic)
+  (comment_inline))
+
+================================================================================
+multiline round
+================================================================================
+(* multi as one*)
+(* multi as one stacked*) // one liner
+(* multi as one stacked*)// sticky
+
+(* multi as
+multi line*)
+(* multi as
+multi line stacked*) // one liner
+(* multi as
+multi line stacked*)// sticky
+--------------------------------------------------------------------------------
+
+(source_file
+  (comment_block_round)
+  (comment_block_round)
+  (comment_inline)
+  (comment_block_round)
+  (comment_inline)
+  (comment_block_round)
+  (comment_block_round)
+  (comment_inline)
+  (comment_block_round)
+  (comment_inline))
+
+================================================================================
+multiline curly
+================================================================================
+{ multi as one }
+{multi as one stacked} // one liner
+{multi as one stacked}// sticky
+
+{ multi as
+multi line }
+{multi as
+multi line stacked} // one liner
+{ multi as
+multi line stacked }// sticky
+--------------------------------------------------------------------------------
+
+(source_file
+  (comment_block_curly)
+  (comment_block_curly)
+  (comment_inline)
+  (comment_block_curly)
+  (comment_inline)
+  (comment_block_curly)
+  (comment_block_curly)
+  (comment_inline)
+  (comment_block_curly)
+  (comment_inline))
